@@ -90,12 +90,16 @@ int main()
     switch (menu) {
     case 1:
         cout << "Привет мир\n";
+        break;
     case 2:
         cout << "Текущее время\n";
+        break;
     case 3:
         cout << "Калькулятор\n";
+        break;
     case 4:
         cout << "Выход\n";
+        break;
     }
 
     cout << "\n#task5\n";
@@ -319,12 +323,35 @@ int main()
 
 
     cout << "\n#task12\n";
-    int num12;
+    double num12;
     char ch12;
-    cout << "Введите расстояние в метра и через пробел единицу измерения в которую нужно перевести"
-        << "m - Миллиметры, c - сантиметры, d - дециметры, k - километры, i - дюймы, f - футы";
+    cout << "Введите расстояние в метра и через пробел единицу измерения в которую нужно перевести\n"
+        << "m - Миллиметры\n c - сантиметры\n d - дециметры\n k - километры\n i - дюймы\n f - футы\n";
     cin >> num12 >> ch12;
     cout << num12 << ch12;
+    switch (ch12) {
+    case 'm':
+        cout << num12 << "м" << num12 * 1000 << "мм\n";
+        break;
+    case 'с':
+        cout << num12 << "м" << num12 * 100 << "см\n";
+        break;
+    case 'd':
+        cout << num12 << "м" << num12 * 10 << "дм\n";
+        break;
+    case 'k':
+        cout << num12 << "м" << num12 / 1000 << "км\n";
+        break;
+    case 'i':
+        cout << num12 << "м" << num12 * 39 << "дюймов\n";
+        break;
+    case 'f':
+        cout << num12 << "м" << num12 * 3 << "футов\n";
+        break;
+    default:
+        cout << "Неверный ввод!";
+        break;
+    }
     return 0;
 }
 
